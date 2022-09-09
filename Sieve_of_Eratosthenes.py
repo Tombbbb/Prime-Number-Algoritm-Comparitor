@@ -2,22 +2,17 @@ from math import sqrt
 from math import floor
 
 def Sieve_of_Eratosthenes(bound):
-    nums = list(i for i in range(2,bound+1))##
+    nums = list(i for i in range(2,bound+1)) #produces list of numbers upto the largest number
 
     index = 0
-    while True:
+    while index < len(nums):
         value = nums[index]
-        while True:
+        while value <= nums[-1]:
             value += nums[index]
             try:
                 nums.remove(value)   
             except ValueError:
-                if value > nums[-1]:
-                    break
+                pass
         index += 1
-        try:
-            nums[index]
-        except:
-            break
 
     return nums

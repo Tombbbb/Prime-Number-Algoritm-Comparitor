@@ -32,7 +32,7 @@ plt.figure(figsize=(7, 5))
 
 colours = ['b', 'g', 'r', 'c', 'm', 'y', 'k'] #up to 7 default colours included
 
-for num in range(1000000, upper+1):
+for num in range(2, upper+1):
     times = [None]*len(algorithms)
     parity = [[]]*len(algorithms) #this is used to ensure all algorithms produce the same output
     for algorithm in algorithms:
